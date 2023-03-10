@@ -1,6 +1,6 @@
-const category = [   
-    'all','breakfast','lunch','dinner','shakes'
-]
+// const category = [   
+//     'all','breakfast','lunch','dinner','shakes'
+// ]
 const menu = [
     {
         id: 1,
@@ -56,28 +56,49 @@ const menu = [
         remote_image: "",
         desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
     },
+    {
+        id: 7,
+        title: "ice-cream",
+        category: "dessert",
+        price: 18.79,
+        image: "./images/my-4.jpg",
+        remote_image: "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/my-4.jpg",
+        desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
 
 ];
-
+const categories = ['all' , ...new Set(menu.map((item) =>item.category))]
+console.log(categories);
 
 
 const sectionCenter = document.querySelector('.section-center');
 const btnContainer = document.querySelector('.btn-container');
 
-const displayMenuButtons = (category) =>{
-    let displayButton = category.map( (category) =>{
+const displayMenuButtons = () =>{
+    let menuButtons = categories.map((category) =>{
         return`
-        <div class="btn-container">
-        <button type="button" class="filter-btn" data-id="${category}">${category}</button>
-      </div> 
-        `     
-    });
+        <button type="button" class="filter-btn" data-id=${category}">${category}</button>
+        `
+    })
+    console.log('filterItems before join', menuButtons);
+    menuButtons = menuButtons.join('');
+    console.log('filterItems after join',menuButtons);
+    btnContainer.innerHTML = menuButtons;
+}
+// const displayMenuButtons = (menu) =>{
+//     let displayButton = menu.map( (category) =>{
+//         return`
+//         <div class="btn-container">
+//         <button type="button" class="filter-btn" data-id="${category}">${category}</button>
+//       </div> 
+//         `     
+//     });
     
-    console.log('filterItems before join', displayButton);
-    displayButton = displayButton.join('');
-    console.log('filterItems after join',displayButton);
-    btnContainer.innerHTML = displayButton;
-};
+//     console.log('filterItems before join', displayButton);
+//     displayButton = displayButton.join('');
+//     console.log('filterItems after join',displayButton);
+//     btnContainer.innerHTML = displayButton;
+// };
 const displayMenuItems = (menu) =>{
     let displayMenu = menu.map( (item) =>{
         return`
@@ -103,7 +124,7 @@ const displayMenuItems = (menu) =>{
 
 
 window.addEventListener('DOMContentLoaded', () =>{
+    displayMenuButtons(menu);
     displayMenuItems(menu);
-    displayMenuButtons(category);
 
 });
