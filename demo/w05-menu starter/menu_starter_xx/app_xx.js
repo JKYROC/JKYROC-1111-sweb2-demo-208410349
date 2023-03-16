@@ -68,20 +68,41 @@ import {menu} from "./data.js"
 //     },
 
 // ];
-const categories = ['all' , ...new Set(menu.map((item) =>item.category))]
-console.log(categories);
+
 const sectionCenter = document.querySelector('.section-center');
 const btnContainer = document.querySelector('.btn-container');
+
+const categories = ['all' , ...new Set(menu.map((item) =>item.category))]
+// console.log(categories);
+
 const displayMenuButtons = () =>{
     let menuButtons = categories.map((category) =>{
         return`
-        <button type="button" class="filter-btn" data-id=${category}">${category}</button>
+        <button type="button" class="filter-btn" data-id=${category}>${category}</button>
         `
     })
-    console.log('filterItems before join', menuButtons);
+    // console.log('filterItems before join', menuButtons);
     menuButtons = menuButtons.join('');
-    console.log('filterItems after join',menuButtons);
+    // console.log('filterItems after join',menuButtons);
     btnContainer.innerHTML = menuButtons;
+    const filterItems = document.querySelectorAll(".filter-btn");
+
+    console.log('filterItems',filterItems);
+    filterItems.forEach( (btn) =>{
+      btn.addEventListener('click', (e) =>{
+        console.log('data-id',e.currentTarget.dataset.id);
+        const category = e.currentTarget.dataset.id;
+        const filterMenu = menu.filter( (item) => item.category === category);
+        
+        if(category === 'all'){
+          console.log('all',menu);
+          displayMenuItems(menu);
+        }else {
+          console.log(category,filterMenu);
+          displayMenuItems(filterMenu);
+        }
+      });
+    });
 }
 // const displayMenuButtons = (menu) =>{
 //     let displayButton = menu.map( (category) =>{
@@ -114,9 +135,9 @@ const displayMenuItems = (menu) =>{
         </article>
         `     
     });
-    console.log('displayMenu before join', displayMenu);
+    // console.log('displayMenu before join', displayMenu);
     displayMenu = displayMenu.join('');
-    console.log('displayMenu after join', displayMenu);
+    // console.log('displayMenu after join', displayMenu);
     sectionCenter.innerHTML = displayMenu;
 };
 
@@ -124,5 +145,4 @@ const displayMenuItems = (menu) =>{
 window.addEventListener('DOMContentLoaded', () =>{
     displayMenuButtons(menu);
     displayMenuItems(menu);
-
 });
