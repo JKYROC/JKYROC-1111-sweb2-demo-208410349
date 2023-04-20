@@ -26,3 +26,9 @@ const average = students2.reduce( (total,students2,index) =>{
     return total + students2.score;
 },0) / students2.length;
 console.log('average', average);
+
+const sdataAverage = sdata.reduce( (total,sdata,index) =>{
+    console.log('index total', index,total);
+    return total + sdata;
+},0) / sdata.length;
+console.log('sDataAverage', sdataAverage);
