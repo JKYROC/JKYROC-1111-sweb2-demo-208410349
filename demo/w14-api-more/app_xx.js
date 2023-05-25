@@ -1,12 +1,12 @@
 const btn = document.querySelector('.btn');
 
 btn.addEventListener('click', async () => {
-  const url = 'https://www.theaudiodb.com/api/v1/json/2/search.php?s=coldplay';
+  const url = 'https://www.theaudiodb.com/artist/111236';
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log('data',data.artists);
-    displayItems(data.artists);
+    console.log('data',data);
+    displayItems(data);
   } catch (error) {
     console.error(error);
   }
@@ -16,7 +16,7 @@ const displayItems = (items) => {
   const displayData = items
     .map((item) => {
       const { strArtist} = item;
-      return `<p>${strArtist}</p>`;
+      return `<p>${strArtist}</p> `;
     })
     .join('');
   const element = document.createElement('div');

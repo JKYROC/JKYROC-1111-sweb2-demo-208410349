@@ -19,6 +19,7 @@ https://github.com/JKYROC/1111-sweb2-demo-208410349.git
 
 
 ```
-$ git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --after="2023-3-22"
+$ git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --after="2023-05-17"
 10eaf279        JKYROC  Thu May 18 20:30:50 2023 +0800  w14-P1: Get Cocktail data by first letter
+cfe8a51e        JKYROC  Thu May 18 20:38:41 2023 +0800  w14-P2: Get data from MealDB,SportDB,AudioDB one by one as in P1
 ```
