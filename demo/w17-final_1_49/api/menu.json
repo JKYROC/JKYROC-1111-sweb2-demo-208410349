@@ -1,1 +1,59 @@
-[]
+[
+    {
+        "id": 1,
+        "title": "Baked Egg",
+        "category": "breakfast",
+        "price": 11.59,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/my-1.jpg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 2,
+        "title": "Steak and fried egg",
+        "category": "lunch",
+        "price": 17.99,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/my-2.jpg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 3,
+        "title": "Spaghetti with meatballs",
+        "category": "dinner",
+        "price": 18.79,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/my-3.jpg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 4,
+        "title": "buttermilk pancakes",
+        "category": "breakfast",
+        "price": 15.99,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/item-1.jpeg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 5,
+        "title": "Cheese Burger with french fries",
+        "category": "dinner",
+        "price": 22.79,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/item-8.jpeg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 6,
+        "title": "oreo milkshake",
+        "category": "dessert",
+        "price": 11.79,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/item-6.jpeg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    },
+    {
+        "id": 7,
+        "title": "ice-cream",
+        "category": "dessert",
+        "price": 18.79,
+        "remote_image": "https://skhsjlwrhersyemrmkib.supabase.co/storage/v1/object/public/javascript/demo-208410349/w04-menu-starter/my-4.jpg",
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim accusantium natus hic tenetur esse commodi sit perferendis similique dicta earum!"
+    }
+
+]
